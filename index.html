@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger Bar Sign-Up</title>
+  </head>
+  <body>
+    <main>
+      <section class="background-image">
+        <img
+          src="./resources/images/doughnut.jpg"
+          alt="Doughnut Background Images"
+        />
+        <div class="logo-banner">
+          <img
+            src="./resources/images/noun-hamburger.svg"
+            alt="Hamburger Logo"
+          />
+          <h1 class="logo-text">Burger Bar</h1>
+        </div>
+      </section>
+      <section class="desctiption-container">
+        <h2 class="sign-up-title">Sign Up</h2>
+        <p class="sign-up-text">
+          <strong>Fill out the form below to sign up for our burger bar. <br />
+          You <i>know</i>you want to.</strong>
+        </p>
+      </section>
+      <section class="form-container">
+        <h2 class="form-title">Let's do this!</h2>
+        <form action="index.php" method="POST">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+        </form>
+      </section>
+      <section class="button-container">
+        <button class="submit-button" type="submit">Submit</button>
+        <p class="existing-account">
+          Already have an account? <a href="login.html">Log in here</a>
+        </p>
+    </main>
+  </body>
+</html>
