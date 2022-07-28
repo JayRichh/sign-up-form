@@ -1,3 +1,189 @@
-* {
-  font-family: 'Quattrocento Sans', sans-serif;
+:root {
+  font-family: "Quattrocento Sans", sans-serif;
+  --transition-primary: all 0.3s ease-in-out;
+  --shadow-primary: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+i {
+  font-style: italic;
+}
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url("/resources/images/doughnut.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: var(--transition-primary);
+}
+.logo-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 20px;
+  top: 25%;
+  width: 100%;
+  height: 140px;
+  background-color: rgba(173, 121, 121, 0.5);
+}
+.logo-banner-icon {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  filter: invert(1);
+  border-radius: 50%;
+}
+.background-image-container h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.sign-up-continer {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.desctiption-container {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+  letter-spacing: 0.1rem;
+  background-color: white;
+  box-shadow: var(--shadow-primary);
+}
+.desctiption-container p {
+  padding: 50px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+}
+.form-container {
+  box-sizing: border-box;
+  padding: 50px;
+  width: 100%;
+  height: 40%;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.892);
+  box-shadow: var(--shadow-primary);
+}
+.form-container h2 {
+  width: 100%;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  color: rgb(42, 42, 42);
+  padding-bottom: 20px;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 75%;
+}
+.form-group {
+  height: 30%;
+  width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  color: rgb(42, 42, 42);
+  padding-bottom: 5px;
+}
+.form-group input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
+  margin-right: 20px;
+}
+.form-group input:focus {
+  outline: 1px solid rgb(44, 92, 162);
+}
+.form-group input::placeholder {
+  color: rgb(230, 230, 230);
+}
+.form-group input.error {
+  border: 1px solid red;
+}
+
+.form-group input.error::placeholder {
+  color: red;
+}
+
+.button-container {
+  box-sizing: border-box;
+  padding: 50px;
+  width: 100%;
+  height: 30%;
+  display: block;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  box-shadow: var(--shadow-primaty);
+}
+.button-container button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5c021;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: var(--transition-primary);
+  box-shadow: var(--shadow-primaty);
+}
+.button-container p {
+  padding-top: 20px;
+  letter-spacing: 0;
+  color: rgb(42, 42, 42);
+}
+.button-container button:hover {
+  background-color: #ffc10791;
+  transform: translateY(-3px);
+  transition: var(--transition-primary);
+  color: #fff;
+}
+.button-container button:active {
+  background-color: #73b156;
+  transform: translateY(3px);
+  transition: 0.05s;
+}
+.button-container button:focus {
+  background-color: #73b156;
+}
+
+@media screen and (max-width: 800px) {
+  .background-image-container {
+    transform: translateX(-100%);
+    transition: var(--transition-primary);
+  }
+  .sign-up-continer {
+    width: 100%;
+    transition: var(--transition-primary);
+  }
 }
